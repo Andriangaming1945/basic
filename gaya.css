@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(violet, lightpink);
+}
+
+.Login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgb(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.Login h2 {
+  font-size: 30px;
+  margin: 0 0 30px;
+  padding: 0;
+  color: azure;
+  text-align: center;
+}
+
+.Login .user {
+  position: relative;
+}
+
+.Login .user input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: whitesmoke;
+  margin-bottom: 30px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  outline: none;
+}
+
+.Login .user label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: aliceblue;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.Login .user input:focus ~ label,
+.Login .user input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: blue;
+  font-size: 12px;
+}
+.Login form a {
+  width: 280px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: rgb(191, 47, 71);
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin-top: 40px;
+  letter-spacing: 4px;
+
+  transition: 0.5s;
+}
+
+.Login form a:hover {
+  background: rgb(219, 36, 176);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px violet, 0 0 25px rgb(142, 58, 142), 0 0 50px purple, 0 0 100px pink;
+}
+
+.Login form a span {
+  position: absolute;
+  display: block;
+}
+
+.Login form a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, violet);
+  animation: btn1 1s linear infinite;
+}
+
+@keyframes btn1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
